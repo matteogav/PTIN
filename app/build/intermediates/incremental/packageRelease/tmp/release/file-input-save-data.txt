@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Fri Apr 26 01:49:05 CEST 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\Libra\\AndroidStudioProjects\\PTIN\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+0.path=classes.dex
+0.set=DEX
+count=1
