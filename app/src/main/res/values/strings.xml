@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">PTIN</string>
+    <string name="app_name">Vilanova Supercomputing Parking</string>
+    <string name="activity_register_title">Register</string>
+    <string name="activity_login_title">Login</string>
 </resources>
