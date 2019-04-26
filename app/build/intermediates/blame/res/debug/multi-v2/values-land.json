@@ -4,6 +4,25 @@
             "outputFile": "C:\\Users\\Libra\\AndroidStudioProjects\\PTIN\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\Libra\\.gradle\\caches\\transforms-2\\files-2.1\\ad4a11c03995a8eead34c2872c8539f4\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endLines": "8",
+                        "endColumns": "10",
+                        "endOffsets": "431"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Libra\\.gradle\\caches\\transforms-2\\files-2.1\\678036c88d70e0d43335a70780e67d13\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
