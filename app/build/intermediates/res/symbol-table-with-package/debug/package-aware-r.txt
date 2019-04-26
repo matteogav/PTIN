@@ -505,6 +505,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -779,6 +781,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id text_header
 id time
 id title
 id titleDividerNoCustom
@@ -877,6 +880,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string activity_login_title
+string activity_register_title
 string app_name
 string search_menu_title
 string status_bar_notification_info_overflow
