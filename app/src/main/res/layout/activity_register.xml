@@ -151,30 +151,6 @@
 
             </LinearLayout>
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/floatingActionButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
-                app:backgroundTint="@color/colorPrimaryQuarter"
-                app:srcCompat="@android:drawable/ic_input_add" />
-
-
-
-
-
-
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                />
-
-
-
 
         </LinearLayout>
 
