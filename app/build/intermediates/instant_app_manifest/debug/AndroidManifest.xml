@@ -10,6 +10,8 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="28" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <dist:module dist:instant="true" />
 
     <application
@@ -24,20 +26,24 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.ptin.RegisterActivity"
+            android:exported="true"
             android:label="@string/activity_register_title"
-            android:parentActivityName="com.example.ptin.LoginActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ptin.LoginActivity" />
-        </activity>
-        <activity
-            android:name="com.example.ptin.LoginActivity"
-            android:label="@string/activity_login_title" >
+            android:theme="@style/AppTheme.Dark" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ptin.LoginActivity"
+            android:exported="true"
+            android:label="@string/activity_login_title"
+            android:parentActivityName="com.example.ptin.RegisterActivity"
+            android:theme="@style/AppTheme.Dark" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ptin.LoginActivity" />
         </activity>
     </application>
 

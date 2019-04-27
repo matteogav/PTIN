@@ -5,52 +5,54 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import butterknife.ButterKnife;
+
 
 public class RegisterActivity extends AppCompatActivity {
     private static final String TAG = "RegisterActivity";
 
-
-    private EditText _usernameText = (EditText) findViewById(R.id.username);
-    private EditText _emailText = (EditText) findViewById(R.id.email);
-    private EditText _phoneText = (EditText) findViewById(R.id.phone);
-    private EditText _passwordText = (EditText) findViewById(R.id.password);
-    private EditText _confirmPasswordText = (EditText) findViewById(R.id.confirmPassword);
-
-
-    private Button button = (Button) findViewById(R.id.sign_in_button);
+    private AutoCompleteTextView _usernameText;
+    private AutoCompleteTextView _emailText;
+    private AutoCompleteTextView _phoneText;
+    private AutoCompleteTextView _passwordText;
+    private AutoCompleteTextView _confirmPasswordText;
+    private Button _registerButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        ButterKnife.inject(this);
+
+        _usernameText = (AutoCompleteTextView) findViewById(R.id.username);
+        _emailText = (AutoCompleteTextView) findViewById(R.id.email);
+        _phoneText = (AutoCompleteTextView) findViewById(R.id.phone);
+        _passwordText = (AutoCompleteTextView) findViewById(R.id.password);
+        _confirmPasswordText = (AutoCompleteTextView) findViewById(R.id.confirmPassword);
+        _registerButton = (Button) findViewById(R.id.register_button);
 
 
-
-        button.setOnClickListener(new View.OnClickListener() {
+        _registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signup();
+                register();
             }
         });
 
 
     }
 
-    public void signup() {
-        Log.d(TAG, "Signup");
+    public void register() {
+        Log.d(TAG, "Register");
 
         if (!validate()) {
-            onSignupFailed();
+            onRegisterFailed();
             return;
         }
 
-        button.setEnabled(false);
+        _registerButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(RegisterActivity.this,
                 R.style.AppTheme_Dark); //Con AppTheme_Dark_Dialog daba error
@@ -69,26 +71,26 @@ public class RegisterActivity extends AppCompatActivity {
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        // On complete call either onSignupSuccess or onSignupFailed
+                        // On complete call either onRegisterSuccess or onRegisterFailed
                         // depending on success
-                        onSignupSuccess();
-                        // onSignupFailed();
+                        onRegisterSuccess();
+                        // onRegisterFailed();
                         progressDialog.dismiss();
                     }
                 }, 3000);
     }
 
 
-    public void onSignupSuccess() {
-        button.setEnabled(true);
+    public void onRegisterSuccess() {
+        _registerButton.setEnabled(true);
         setResult(RESULT_OK, null);
         finish();
     }
 
-    public void onSignupFailed() {
+    public void onRegisterFailed() {
         Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
 
-        button.setEnabled(true);
+        _registerButton.setEnabled(true);
     }
 
     public boolean validate() {
