@@ -13,13 +13,14 @@
     <string name="action_sign_in_short" translatable="false">Sign in</string>
 
     <string name="prompt_license_plate">License plate</string>
-    <string name="prompt_vehicle_ID">Nickname for your vehicle</string>
+    <string name="prompt_vehicle_ID">Nickname for one of your vehicles</string>
     <string name="RegisterMe_Button">Register me!</string>
 
 
 
 
     <string name="activity_login_title">Login</string>
+    <string name="prompt_username">Your Name or Nickname</string>
 
 
 </resources>

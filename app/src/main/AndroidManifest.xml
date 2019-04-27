@@ -3,6 +3,8 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.example.ptin">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <dist:module dist:instant="true" />
 
     <application
@@ -13,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity   android:name=".RegisterActivity"
+                        android:theme="@style/AppTheme.Dark"
                     android:label="@string/activity_register_title"
                     android:parentActivityName=".LoginActivity">
             <meta-data
@@ -20,6 +23,7 @@
                 android:value="com.example.ptin.LoginActivity" />
         </activity>
         <activity   android:name=".LoginActivity"
+                        android:theme="@style/AppTheme.Dark"
                     android:label="@string/activity_login_title"
                     >
             <intent-filter>

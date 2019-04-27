@@ -40,6 +40,24 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/prompt_username"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
@@ -62,7 +80,8 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <EditText
+                <AutoCompleteTextView
+                    android:id="@+id/phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -78,7 +97,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <EditText
+                <AutoCompleteTextView
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -100,7 +119,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <EditText
+                <AutoCompleteTextView
                     android:id="@+id/confirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -162,16 +181,16 @@
         android:gravity="bottom"
         android:orientation="vertical">
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/sign_in_button"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
             android:layout_margin="16dp"
-            android:text="@string/RegisterMe_Button"
+            android:padding="12dp"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:text="Create Account"/>
 
 
     </LinearLayout>
