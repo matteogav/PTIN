@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array lang_select
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1131,6 +1132,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name
 id navigation_header_container
 id never
 id none
@@ -1153,6 +1155,7 @@ id progress_horizontal
 id radio
 id register_button
 id register_form
+id register_lang_select_spinner
 id right
 id right_icon
 id right_side
@@ -1198,6 +1201,7 @@ id start
 id stretch
 id submenuarrow
 id submit_area
+id surname
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1229,6 +1233,9 @@ id unlabeled
 id up
 id useLogo
 id username
+id vehicle_brand
+id vehicle_license_plate
+id vehicle_model
 id view_offset_helper
 id visible
 id withText
@@ -1351,7 +1358,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
-string action_sign_in_short
+string action_register_short
 string activity_login_title
 string activity_register_title
 string app_name
@@ -1370,11 +1377,14 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string prompt_confirmPassword
 string prompt_email
-string prompt_license_plate
+string prompt_name
 string prompt_password
 string prompt_phoneNumber
+string prompt_surname
 string prompt_username
-string prompt_vehicle_ID
+string prompt_vehicle_brand
+string prompt_vehicle_license_plate
+string prompt_vehicle_model
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
@@ -1576,6 +1586,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style DarkGreenButtonTheme
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

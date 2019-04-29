@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vilanova Supercomputing Parking</string>
+    <string name="RegisterMe_Button" translatable="false">Crear Compte</string>
+    <string name="action_register_short" translatable="false">Registre</string>
+    <string name="activity_register_title" translatable="false">Registra\'t</string>
+    <string name="activity_login_title" translatable="false">Inicia sessió</string>
+    <string name="prompt_confirmPassword" translatable="false">Confirmar contrasenya</string>
+    <string name="prompt_email" translatable="false">Correu electrònic</string>
+    <string name="prompt_name" translatable="false">Nom</string>
+    <string name="prompt_password" translatable="false">Contrasenya</string>
+    <string name="prompt_phoneNumber" translatable="false">Número de telèfon</string>
+    <string name="prompt_surname" translatable="false">Cognom(s)</string>
+    <string name="prompt_username" translatable="false">Nom d\'usuari</string>
+    <string name="prompt_vehicle_brand" translatable="false">Marca d\'un vehicle teu</string>
+    <string name="prompt_vehicle_license_plate" translatable="false">Matrícula del vehicle</string>
+    <string name="prompt_vehicle_model" translatable="false">Model del vehicle</string>
+</resources>

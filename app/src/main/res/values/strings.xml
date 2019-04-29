@@ -3,24 +3,35 @@
 
 
 
-
-    <string name="activity_register_title">Register</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_phoneNumber">Phone number</string>
-
-    <string name="prompt_password">Password</string>
-    <string name="prompt_confirmPassword">Confirm password</string>
-    <string name="action_sign_in_short" translatable="false">Sign in</string>
-
-    <string name="prompt_license_plate">License plate</string>
-    <string name="prompt_vehicle_ID">Nickname for one of your vehicles</string>
-    <string name="RegisterMe_Button">Register me!</string>
+    <!-- Language select dialog -->
+    <string-array name="lang_select">
+        <item>Català</item>
+        <item>English</item>
+        <item>Español</item>
+    </string-array>
 
 
-
-
+    <!-- LOGIN SCREEN -->
     <string name="activity_login_title">Login</string>
-    <string name="prompt_username">Your Name or Nickname</string>
 
+
+    <!-- REGISTER SCREEN -->
+    <string name="activity_register_title">Register</string>
+
+        <string name="prompt_name">Name</string>
+        <string name="prompt_surname">Surname(s)</string>
+        <string name="prompt_username">Username</string>
+
+        <string name="prompt_email">Email</string>
+        <string name="prompt_phoneNumber">Phone number</string>
+
+        <string name="prompt_password">Password</string>
+        <string name="prompt_confirmPassword">Confirm password</string>
+        <string name="action_register_short">Register</string>
+
+        <string name="prompt_vehicle_brand">Brand of a vehicle of yours</string>
+        <string name="prompt_vehicle_model">Model of the vehicle</string>
+        <string name="prompt_vehicle_license_plate">License plate of the vehicle</string>
+        <string name="RegisterMe_Button">Create Account</string>
 
 </resources>

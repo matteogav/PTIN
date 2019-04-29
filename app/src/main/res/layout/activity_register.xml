@@ -11,22 +11,24 @@
 
     <!-- register progress -->
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryHalf"
-        android:gravity="center"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/activity_register_title"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white"
-        android:textColorLink="@color/colorPrimary"
-        android:textIsSelectable="false"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:layout_height="wrap_content" />
+        android:layout_gravity="end"
+        android:gravity="end">
+
+        <Spinner
+            android:id="@+id/register_lang_select_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:entries="@array/lang_select"
+            android:foregroundGravity="top|right"
+            android:gravity="right"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/register_form"
@@ -45,11 +47,53 @@
                 android:paddingRight="16dp">
 
                 <AutoCompleteTextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-5dp"
+                    android:hint="@string/prompt_name"
+                    android:imeActionId="1"
+                    android:imeActionLabel="@string/action_register_short"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/prompt_surname"
+                    android:imeActionId="2"
+                    android:imeActionLabel="@string/action_register_short"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <AutoCompleteTextView
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:hint="@string/prompt_username"
+                    android:imeActionId="3"
+                    android:imeActionLabel="@string/action_register_short"
                     android:inputType="textPersonName"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -68,6 +112,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="-5dp"
                     android:hint="@string/prompt_email"
+                    android:imeActionId="4"
+                    android:imeActionLabel="@string/action_register_short"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -88,6 +134,8 @@
                     android:autofillHints=""
                     android:ems="10"
                     android:hint="@string/prompt_phoneNumber"
+                    android:imeActionId="5"
+                    android:imeActionLabel="@string/action_register_short"
                     android:inputType="phone" />
             </android.support.design.widget.TextInputLayout>
 
@@ -102,11 +150,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="-5dp"
-                    android:autofillHints=""
                     android:hint="@string/prompt_password"
                     android:imeActionId="6"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
+                    android:imeActionLabel="@string/action_register_short"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -124,11 +170,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
-                    android:autofillHints=""
                     android:hint="@string/prompt_confirmPassword"
-                    android:imeActionId="6"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
+                    android:imeActionId="7"
+                    android:imeActionLabel="@string/action_register_short"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -149,11 +193,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <android.support.design.widget.TextInputEditText
+                    <AutoCompleteTextView
+                        android:id="@+id/vehicle_brand"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="-5dp"
-                        android:hint="@string/prompt_vehicle_ID" />
+                        android:hint="@string/prompt_vehicle_brand"
+                        android:imeActionId="8"
+                        android:imeActionLabel="@string/action_register_short"
+                        android:maxLines="1"
+                        android:singleLine="true" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -161,38 +210,56 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <android.support.design.widget.TextInputEditText
+                    <AutoCompleteTextView
+                        android:id="@+id/vehicle_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:hint="@string/prompt_vehicle_model"
+                        android:imeActionId="9"
+                        android:imeActionLabel="@string/action_register_short"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/vehicle_license_plate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:hint="@string/prompt_license_plate" />
+                        android:hint="@string/prompt_vehicle_license_plate"
+                        android:imeActionId="10"
+                        android:imeActionLabel="@string/action_register_short"
+                        android:maxLines="1"
+                        android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/register_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:imeActionId="11"
+                android:imeActionLabel="@string/action_register_short"
+                android:padding="12dp"
+                android:text="@string/RegisterMe_Button"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:theme="@style/DarkGreenButtonTheme" />
 
 
         </LinearLayout>
 
     </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/register_button"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:padding="12dp"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="Create Account"/>
-
-
-    </LinearLayout>
 
 </LinearLayout>

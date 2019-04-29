@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vilanova Supercomputing Parking</string>
+    <string name="activity_login_title">Login</string>
+    <string name="activity_register_title">Register</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_surname">Surname(s)</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_phoneNumber">Phone number</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_confirmPassword">Confirm password</string>
+    <string name="action_register_short">Register</string>
+    <string name="prompt_vehicle_brand">Brand of a vehicle of yours</string>
+    <string name="prompt_vehicle_model">Model of the vehicle</string>
+    <string name="prompt_vehicle_license_plate">License plate of the vehicle</string>
+    <string name="RegisterMe_Button">Create Account</string>
+</resources>
